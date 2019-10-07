@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<!--
+    Author:  Pablo Moreno
+    Class:   Web & Distributed Programming
+    Project #: 3
+    Description: A five-dice rolling application, with buttons for whether you'd like to roll each specific die,
+                 And checkboxes for rolling all of the kept dice. It's a base for Yahtzee.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Potpourri</title>
+    <link rel="stylesheet" href="diceroller.css">
+    <script src="diceroller.js"></script>
+</head>
+
+<body onload="RollAllDice()">
+    Welcome to a dice roller I made. You should be able to roll each individual dice, or, if you'd like,<br>
+    you can lock specific dice from being rolled. It's a base for Yahtzee, but without the hassle of keeping score. <br><br>
+    <form class=dice>
+        <button type="button" onclick="RollSpecificDice('dice1')">Roll First Die</button>
+        First Die:
+        <input type="text" id="dice1" class="text" value="" size="5" disabled>
+        <input type="checkbox" class="checkbox" id="check1" name="dice1" value="dice1">Lock? <br><br>
+    </form>
+    <form class=dice>
+        <button type="button" onclick="RollSpecificDice('dice2')">Roll Second Die</button>
+        Second Die:
+        <input type="text" id="dice2" class="text" value="" size="5" disabled>
+        <input type="checkbox" class="checkbox" id="check2" name="dice2" value="dice2">Lock? <br><br>
+    </form>
+    <form class=dice>
+        <button type="button" onclick="RollSpecificDice('dice3')">Roll Third Die</button>
+        Third Die:
+        <input type="text" id="dice3" class="text" value="" size="5" disabled>
+        <input type="checkbox" class="checkbox" id="check3" name="dice3" value="dice3">Lock? <br><br>
+    </form>
+    <form class=dice>
+        <button type="button" onclick="RollSpecificDice('dice4')">Roll Fourth Die</button>
+        Fourth Die:
+        <input type="text" id="dice4" class="text" value="" size="5" disabled>
+        <input type="checkbox" class="checkbox" id="check4" name="dice4" value="dice4">Lock? <br><br>
+    </form>
+    <form class=dice>
+        <button type="button" onclick="RollSpecificDice('dice5')">Roll Fifth Die</button>
+        Fifth Die:
+        <input type="text" id="dice5" class="text" value="" size="5" disabled>
+        <input type="checkbox" class="checkbox" id="check5" name="dice5" value="dice5">Lock? <br><br>
+    </form>
+    <button type="button" onclick="RollAllOpenDice()"> Roll All Free Dice? </button> <br><br><br><br>
+    <button type="button" onclick="RollAllDice()" autofocus> Roll All Dice? (Unchecks Boxes) </button>
+</body>
+
+</html>

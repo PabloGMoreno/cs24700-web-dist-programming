@@ -1,0 +1,145 @@
+<!--
+    Author (Name): Pablo Moreno
+    Course: Web and Distributed Programming
+    Project Number: 2.
+    Semester: Fall 2019
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <!-- If anything about the text is going to be changed, it's going to be done in the style.css file in the zip. -->
+    <title>Course Schedule &mdash; Pablo Moreno</title>
+</head>
+
+<body>
+    <h1>
+        Course Schedule &mdash; Pablo Moreno
+    </h1>
+<!-- Unordered List for jumping in the page. -->
+    <ul>
+        <li><a href="#Biography">Jump to Biography</a></li>
+        <li><a href="#Courses">Jump to Courses</a></li>
+        <li><a href="#Schedule">Jump to Schedule</a></li>
+    </ul>
+<!-- Biography Section -->
+    <div id="Biography">
+        <blockquote>
+            I'm Pablo Moreno. I'm a Computer Science major going on my fifth year. I hated naps in my early days of
+            living, and now I'm wishing I'd have napped more then, because I certainly don't have much
+            time for it now. I love video and photo editing, and I'm a huge fan of British game shows and 80's jazz
+            fusion.
+        </blockquote>
+        <img src="surfs_up_finished.png" id="img1" alt="A picture I took and then edited.">
+    </div>
+<!-- Course Section -->
+    <div id="Courses">
+        <ul>
+            <li>Japanese 1 &mdash; FLAN-11300</li>
+            <li>Video Game Programming &mdash; CPSC-41000</li>
+            <li>Computer Security &mdash; CPSC-42000</li>
+            <li>Web and Distributed Programming &mdash; CPSC-24700</li>
+            <li>Software Systems Capstone Project (no class time set) &mdash; CPSC-49200</li>
+        </ul>
+    </div>
+<!-- Schedule section -->
+    <div id="Schedule">
+        <table> <!-- Tables are long and boring. -->
+            <caption>Course Schedule</caption>
+            <tbody>
+                <tr>
+                    <th></th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+                <tr>
+                    <th>8:00 AM</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>9:00 AM</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>10:00 AM</th>
+                    <td>FLAN-11300</td>
+                    <td></td>
+                    <td>FLAN-11300</td>
+                    <td></td>
+                    <td>FLAN-11300</td>
+                </tr>
+                <tr>
+                    <th>11:00 AM</th>
+                    <td>CPSC-41000</td>
+                    <td></td>
+                    <td>CPSC-41000</td>
+                    <td></td>
+                    <td>CPSC-41000</td>
+                </tr>
+                <tr>
+                    <th>12:00 PM</th>
+                    <td>CPSC-42000</td>
+                    <td></td>
+                    <td>CPSC-42000</td>
+                    <td></td>
+                    <td>CPSC-42000</td>
+                </tr>
+                <tr>
+                    <th>1:00 PM</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>2:00 PM</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>3:00 PM</th>
+                    <td>CPSC-24700</td>
+                    <td></td>
+                    <td>CPSC-24700</td>
+                    <td></td>
+                    <td>CPSC-24700</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<!-- Feedback (form) section. 
+     To-do: Add target, action, and method="post" to the form at some point (preferably when hosting the actual site). -->
+    <div id="Feedback">
+        <form>
+            <fieldset>
+                <legend>Feedback Form:</legend>
+                Full name:<br>
+                <input type="text" name="fullname"><br>
+                <input type="radio" name="gender" value="male"> Male<br> 
+                <input type="radio" name="gender" value="female"> Female<br>
+                <input type="radio" name="gender" value="other" checked> Other/Prefer not to say<br> <!-- Prechecked other. -->
+                <textarea rows="4" cols="80"></textarea><br> <!-- Creates text area for input. Would this actually send in the form? -->
+                <input type="submit" value="Submit">
+                <input type="reset">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

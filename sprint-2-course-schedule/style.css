@@ -1,0 +1,64 @@
+/* 
+Author (Name): Pablo Moreno
+Course: Web and Distributed Programming
+Project Number: 2.
+Semester: Fall 2019
+*/
+
+h1 { /* CSS relating to the header. */
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline; 
+}
+
+#Biography { /* For essentially all written text, not including lists. */
+    margin: auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    max-width: 800px;
+    overflow: visible;
+    padding: 12px;
+}
+
+li, ul { /* Lists. */
+    margin: auto;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    max-width: 800px;
+    overflow: visible;
+    padding: 12px;
+}
+
+table, th, td { /* Selecting the entirety of the table here. Really just for the border - I like having the separate fonts here.*/
+    padding: 15px;
+    margin: auto;
+    border: 1px solid black;
+    font-size: 17px;
+}
+
+#img1 { /* For the cover art, or the first image on the page. */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    width:33%; /*Percentage is actually relative to the size of the page, not the image itself.*/
+    height:33%; /*I'll have to remember that one for later. */
+    transition: width 2s, height 2s;
+    transition-delay: 333ms; /* Using transition for the image. Didn't know delay is supposed to go after transition. Crazy stuff. */
+}
+
+#img1:hover { /* On hover actions for the cover art.*/
+    width:66%;
+    height:66%;
+}
+
+#Feedback {
+    margin: auto;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 800px;
+    overflow: visible;
+    padding: 12px;
+}
