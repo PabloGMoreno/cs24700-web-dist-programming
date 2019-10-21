@@ -1,0 +1,31 @@
+<!--
+  Author:  Pablo Moreno
+  Class:   Web & Distributed Programming 
+  Project: Map Mania v2
+  Description: This is the second version of Map Mania that I am creating for Programming Assignment... 4. 
+-->
+<html>
+
+<head>
+  <title>Pablo Moreno - Map Mania v2</title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="map-mania-v2.css">
+  <script src="map-mania-v2.js"></script>
+</head>
+
+<body>
+  <h1>Pablo Moreno's Map Mania v2 </h1>
+  Hint: <input id="hint-box" type="text" value="" size="150" disabled><br><br>
+  Score: <input id="score-box" type="text" value="" size="3" disabled><br><br>
+  Current Timer: <input id="timer-box" type="text" value="" size="3" disabled> <br><br>
+  Current Zoom: <input id="zoom-box" type="text" value="" size="3" disabled>
+  <button onclick="startLevel()">Start!</button> 
+  <button onclick="justMessMeUpFam()">Cheat?</button> 
+  <button onclick="howToPlay()">How To Play? (opens alert)</button><br><br>
+  <div id="map"></div>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrD6OPaI-dfZX5c3RAATdBKP6sNHMepeI&callback=initMap"
+    async defer></script>
+</body>
+
+</html>
