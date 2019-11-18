@@ -196,7 +196,7 @@ function sortContacts() {
 }
 
 function viewCurrentContact() {
-    if (contactArray.length >= 0) {
+    if (contactArray.length > 0) {
     currentContact = contactArray[currentContactIndex];
     console.log(currentContact);
     document.getElementById("nameID").value = currentContact.preferredName;
@@ -204,12 +204,20 @@ function viewCurrentContact() {
     document.getElementById("cityID").value = currentContact.city;
     document.getElementById("stateID").value = currentContact.state;
     document.getElementById("zipID").value = currentContact.zip;
+    if (currentContactIndex <= 0){
+        document.getElementById("previousBtn").disabled = true;
+    }
+    if (currentContactIndex >= (contactArray.length - 1)) {
+        document.getElementById("nextBtn").disabled = true;
+    }
     } else {
         document.getElementById("nameID").value = "";
         document.getElementById("emailID").value = "";
         document.getElementById("cityID").value = "";
         document.getElementById("stateID").value = "";
         document.getElementById("zipID").value = "";
+        document.getElementById("previousBtn").disabled = true;
+        document.getElementById("nextBtn").disabled = true;
     }
     // Todo: Add additional fields.
     //document.getElementById("statusID").innerHTML = "Status: Viewing contact " + (currentContactIndex + 1) + " of " + contactArray.length;
