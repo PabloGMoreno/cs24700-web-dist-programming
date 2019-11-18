@@ -95,6 +95,7 @@ function loadNextContact(URL) {
             if (contactURLArray.length > loadingContact) {
                 loadNextContact(contactURLArray[loadingContact]);
             } else {
+                viewCurrentContact();
                 console.log("A connection to the server has been established, but an error occurred while loading contact file #" + loadingContact + ".");
             }
         }
@@ -195,6 +196,7 @@ function sortContacts() {
 }
 
 function viewCurrentContact() {
+    if (contactArray.length >= 0) {
     currentContact = contactArray[currentContactIndex];
     console.log(currentContact);
     document.getElementById("nameID").value = currentContact.preferredName;
@@ -202,7 +204,13 @@ function viewCurrentContact() {
     document.getElementById("cityID").value = currentContact.city;
     document.getElementById("stateID").value = currentContact.state;
     document.getElementById("zipID").value = currentContact.zip;
-
+    } else {
+        document.getElementById("nameID").value = "";
+        document.getElementById("emailID").value = "";
+        document.getElementById("cityID").value = "";
+        document.getElementById("stateID").value = "";
+        document.getElementById("zipID").value = "";
+    }
     // Todo: Add additional fields.
     //document.getElementById("statusID").innerHTML = "Status: Viewing contact " + (currentContactIndex + 1) + " of " + contactArray.length;
 }
