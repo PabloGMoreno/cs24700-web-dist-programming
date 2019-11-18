@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<!--
+    Author:  Pablo Moreno
+    Class:   Web & Distributed Programming 
+    Project: Mustang v2
+    Description: An implementation of Mustang v2, as required by Sprint 6. 
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pablo Moreno - Mustang v1</title>
+    <link rel="stylesheet" href="mustang-v2.css">
+    <script src="mustang-v2.js"></script>
+</head>
+
+<body onload="initApplication()">
+    <h1>Pablo Moreno - Mustang v2</h1>
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input id="nameID" type="text" value="" size="20">
+            </td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>
+                <input id="emailID" type="text" value="" size="20">
+            </td>
+        </tr>
+        <tr>
+            <td>City:</td>
+            <td>
+                <input id="cityID" type="text" value="" size="20">
+            </td>
+        </tr>
+        <tr>
+            <td>State:</td>
+            <td>
+                <input id="stateID" type="text" value="" size="20" onkeypress="keyPressed()">
+            </td>
+        </tr>
+        <tr>
+            <td>Zip</td>
+            <td>
+                <input id="zipID" type="text" value="" size="20" onblur="zipBlurFunction()">
+            </td>
+        </tr>
+        <tr>
+            <td><button type="button" id="previousBtn" onclick="previousContact()">Previous</button></td>
+            <td><button type="button" id="nextBtn" autofocus onclick="nextContact()">Next</button>
+            </td>
+        <tr>
+            <td><button type="button" id="newBtn" onclick="addContact()">New</button></td>
+            <td><button type="button" id="removeBtn" onclick="removeContact()">Delete</button>
+            </td>
+        </tr>
+    </table>
+
+    <button onclick="logContacts()">Log Contacts to Console</button><br><br>
+</body>
+
+</html>
