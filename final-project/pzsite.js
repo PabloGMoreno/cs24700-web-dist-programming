@@ -14,6 +14,8 @@ function initApplication() {
     console.log('Attempting to load user and information... information.')
     loadJSONUsersFromServer();
     loadJSONInformationFromServer();
+    console.log(userArray);
+    console.log(informationArray); 
 }
 
 function loadJSONUsersFromServer() {
@@ -22,7 +24,7 @@ function loadJSONUsersFromServer() {
     //Double checking that our array is empty.
     userArray.length = 0;
 
-    xmlhttpUsers = new XMLHttpRequest();
+    var xmlhttpUsers = new XMLHttpRequest();
     xmlhttpUsers.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             userArray = JSON.parse(this.responseText);
@@ -31,7 +33,7 @@ function loadJSONUsersFromServer() {
 
     xmlhttpUsers.open("GET", "load-users.php", true);
     xmlhttpUsers.send();   
-    console.log(userArray);
+
 }
 
 function loadJSONInformationFromServer() {
@@ -40,7 +42,7 @@ function loadJSONInformationFromServer() {
     //Again, double checking that our array is empty.
     informationArray.length = 0;
 
-    xmlhttpInfo = new XMLHttpRequest();
+    var xmlhttpInfo = new XMLHttpRequest();
     xmlhttpInfo.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             informationArray = JSON.parse(this.responseText);
@@ -48,8 +50,7 @@ function loadJSONInformationFromServer() {
     };
 
     xmlhttpInfo.open("GET", "load-information.php", true);
-    xmlhttpInfo.send(); 
-    console.log(informationArray);  
+    xmlhttpInfo.send();  
 }
 
 function initDoorProtocol() {
@@ -59,30 +60,28 @@ function initDoorProtocol() {
 
 function saveJSONUsersToServer() {
     console.log("saveJSONUsersToServer()");
-    xmlhttpSaveUsers = new XMLHttpRequest();
+    var xmlhttpSaveUsers = new XMLHttpRequest();
     xmlhttpSaveUsers.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             console.log('Response: ' + this.responseText);
-            setStatus(this.responseText)
         }
     };
     xmlhttpSaveUsers.open("POST", "save-users.php", true);
     xmlhttpSaveUsers.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xmlhttpSaveUsers.send("users=" + JSON.stringify(userArray));   
+    xmlhttpSaveUsers.send(JSON.stringify(userArray));   
 }
 
 function saveJSONInformationToServer() {
     console.log("saveUsersToServer()");
-    xmlhttpSaveInformation = new XMLHttpRequest();
+    var xmlhttpSaveInformation = new XMLHttpRequest();
     xmlhttpSaveInformation.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             console.log('Response: ' + this.responseText);
-            setStatus(this.responseText)
         }
     };
     xmlhttpSaveInformation.open("POST", "save-users.php", true);
     xmlhttpSaveInformation.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xmlhttpSaveInformation.send("information=" + JSON.stringify(informationArray));   
+    xmlhttpSaveInformation.send(JSON.stringify(informationArray));   
 }
 
 
