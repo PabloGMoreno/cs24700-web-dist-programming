@@ -26,7 +26,6 @@ function loadJSONUsersFromServer() {
     xmlhttpUsers.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             userArray = JSON.parse(this.responseText);
-            setStatus("Loaded users (" + userArray.length + ")");
         }
     };
 
@@ -45,7 +44,6 @@ function loadJSONInformationFromServer() {
     xmlhttpInfo.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             informationArray = JSON.parse(this.responseText);
-            setStatus("Loaded information (" + informationArray.length + ")");
         }
     };
 
