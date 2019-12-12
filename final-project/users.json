@@ -1,0 +1,6 @@
+[
+    {"Username": "main site", "Color":"#FFFFFF", "IsProminent":true},
+    {"Username": "rallyftw", "Color":"#6382A5","IsProminent":true},
+    {"Username": "FakeUser","Color":"#FFFFFF", "IsProminent":false},
+    {"Username": "prominentuser", "Color":"#FFFFFF", "IsProminent":true}
+]

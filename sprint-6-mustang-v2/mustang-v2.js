@@ -5,7 +5,7 @@ var loadingContact = 0;
 var currentContactIndex = 0;
 
 function initApplication() {
-    console.log('Initializing Mustang v1...');
+    console.log('Initializing Mustang v2...');
     loadIndex();
 }
 
